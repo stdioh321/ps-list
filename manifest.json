@@ -1,0 +1,14 @@
+{
+    "name": "PS list",
+    "short_name": "Ps List",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#022346",
+    "theme_color": "#fcfcfa",
+    "orientation": "portrait-primary",
+    "icons": [{
+        "src": "/assets/images/ps.png",
+        "type": "image/png",
+        "sizes": "72x72"
+    }]
+}

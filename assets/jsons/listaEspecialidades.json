@@ -1,0 +1,338 @@
+[
+  {
+    "id": 4205,
+    "nome": "AVALIACAO MULTIDISCIPLINAR PARA CRIANCA SINDROMICA"
+  },
+  {
+    "id": 1,
+    "nome": "Acupuntura"
+  },
+  {
+    "id": 2,
+    "nome": "Alergologia"
+  },
+  {
+    "id": 3162,
+    "nome": "Alergologia Pediátrica"
+  },
+  {
+    "id": 3,
+    "nome": "Angiologia"
+  },
+  {
+    "id": 3157,
+    "nome": "Arritmologia Clínica"
+  },
+  {
+    "id": 78,
+    "nome": "Avaliação de Marca-Passo"
+  },
+  {
+    "id": 5,
+    "nome": "Bucomaxilo"
+  },
+  {
+    "id": 6,
+    "nome": "Cardiologia"
+  },
+  {
+    "id": 3163,
+    "nome": "Cardiologia Pediátrica"
+  },
+  {
+    "id": 3313,
+    "nome": "Cardiologia Pediátrica"
+  },
+  {
+    "id": 7,
+    "nome": "Cirurgia Bariátrica"
+  },
+  {
+    "id": 8,
+    "nome": "Cirurgia Cardiovascular Cardíaca"
+  },
+  {
+    "id": 19,
+    "nome": "Cirurgia Geral"
+  },
+  {
+    "id": 20,
+    "nome": "Cirurgia Ginecológica"
+  },
+  {
+    "id": 21,
+    "nome": "Cirurgia Oftalmológica"
+  },
+  {
+    "id": 3984,
+    "nome": "Cirurgia Otorrinolaringologia"
+  },
+  {
+    "id": 3164,
+    "nome": "Cirurgia Pediátrica"
+  },
+  {
+    "id": 24,
+    "nome": "Cirurgia Plástica Reparadora"
+  },
+  {
+    "id": 216,
+    "nome": "Cirurgia Torácica"
+  },
+  {
+    "id": 26,
+    "nome": "Cirurgia Vascular"
+  },
+  {
+    "id": 9,
+    "nome": "Cirurgia de Cabeça e Pescoço"
+  },
+  {
+    "id": 11,
+    "nome": "Cirurgia de Joelho"
+  },
+  {
+    "id": 12,
+    "nome": "Cirurgia de Mama"
+  },
+  {
+    "id": 13,
+    "nome": "Cirurgia de Mão"
+  },
+  {
+    "id": 16,
+    "nome": "Cirurgia de Quadril"
+  },
+  {
+    "id": 18,
+    "nome": "Cirurgia de Tornozelo"
+  },
+  {
+    "id": 17,
+    "nome": "Cirurgia de Tórax"
+  },
+  {
+    "id": 3062,
+    "nome": "Cirurgia do Aparelho Digestivo"
+  },
+  {
+    "id": 27,
+    "nome": "Clínica Médica"
+  },
+  {
+    "id": 217,
+    "nome": "Coloproctologia"
+  },
+  {
+    "id": 28,
+    "nome": "Cuidados da Pele"
+  },
+  {
+    "id": 30,
+    "nome": "Dermatologia"
+  },
+  {
+    "id": 31,
+    "nome": "Endocrinologia"
+  },
+  {
+    "id": 3303,
+    "nome": "Endocrinologia Pediátrica"
+  },
+  {
+    "id": 32,
+    "nome": "Fisiatria"
+  },
+  {
+    "id": 33,
+    "nome": "Fisioterapia"
+  },
+  {
+    "id": 34,
+    "nome": "Fonoaudiologia"
+  },
+  {
+    "id": 36,
+    "nome": "Gastroenterologia"
+  },
+  {
+    "id": 3309,
+    "nome": "Gastroenterologia Pediátrica"
+  },
+  {
+    "id": 37,
+    "nome": "Genética Médica"
+  },
+  {
+    "id": 38,
+    "nome": "Geriatria"
+  },
+  {
+    "id": 40,
+    "nome": "Ginecologia"
+  },
+  {
+    "id": 41,
+    "nome": "Hematologia"
+  },
+  {
+    "id": 42,
+    "nome": "Hepatologia"
+  },
+  {
+    "id": 44,
+    "nome": "Homeopatia"
+  },
+  {
+    "id": 45,
+    "nome": "Infectologia"
+  },
+  {
+    "id": 3311,
+    "nome": "Infectologia Pediátrica "
+  },
+  {
+    "id": 46,
+    "nome": "Mastologia"
+  },
+  {
+    "id": 3202,
+    "nome": "Medicina Geneticista Infantil"
+  },
+  {
+    "id": 47,
+    "nome": "Nefrologia"
+  },
+  {
+    "id": 3306,
+    "nome": "Nefrologia Pediátrica"
+  },
+  {
+    "id": 48,
+    "nome": "Neurocirurgia"
+  },
+  {
+    "id": 3169,
+    "nome": "Neurocirurgia Pediátrica"
+  },
+  {
+    "id": 49,
+    "nome": "Neurologia"
+  },
+  {
+    "id": 3310,
+    "nome": "Neurologia Pediátrica"
+  },
+  {
+    "id": 4788,
+    "nome": "Neuropsicologia Adulto"
+  },
+  {
+    "id": 4645,
+    "nome": "Neurorradiologia"
+  },
+  {
+    "id": 3171,
+    "nome": "Nutricionista Pediátrica"
+  },
+  {
+    "id": 50,
+    "nome": "Nutrição"
+  },
+  {
+    "id": 3042,
+    "nome": "Nutrologia"
+  },
+  {
+    "id": 3223,
+    "nome": "Obstetrícia"
+  },
+  {
+    "id": 51,
+    "nome": "Oftalmologia"
+  },
+  {
+    "id": 3582,
+    "nome": "Oftalmologia Pediátrica"
+  },
+  {
+    "id": 3150,
+    "nome": "Onco-oftalmologia"
+  },
+  {
+    "id": 54,
+    "nome": "Oncologia Ocular"
+  },
+  {
+    "id": 55,
+    "nome": "Ortopedia / Traumatologia"
+  },
+  {
+    "id": 3802,
+    "nome": "Ortopedia Fixador Externo"
+  },
+  {
+    "id": 4792,
+    "nome": "Ortopedia Geral"
+  },
+  {
+    "id": 3102,
+    "nome": "Ortopedia de Mão"
+  },
+  {
+    "id": 56,
+    "nome": "Otorrinolaringologia"
+  },
+  {
+    "id": 3302,
+    "nome": "Pediatria"
+  },
+  {
+    "id": 57,
+    "nome": "Pneumologia"
+  },
+  {
+    "id": 3305,
+    "nome": "Pneumologia Pediátrica"
+  },
+  {
+    "id": 59,
+    "nome": "Proctologia"
+  },
+  {
+    "id": 4753,
+    "nome": "Pronto Atendimento Otorrinolaringologia"
+  },
+  {
+    "id": 58,
+    "nome": "Pré-Operatório"
+  },
+  {
+    "id": 61,
+    "nome": "Psicologia"
+  },
+  {
+    "id": 3175,
+    "nome": "Psicologia Pediátrica"
+  },
+  {
+    "id": 62,
+    "nome": "Psiquiatria"
+  },
+  {
+    "id": 63,
+    "nome": "Reumatologia"
+  },
+  {
+    "id": 65,
+    "nome": "Terapia Ocupacional"
+  },
+  {
+    "id": 66,
+    "nome": "Urologia"
+  },
+  {
+    "id": 67,
+    "nome": "Urologia Cirurgia"
+  }
+]
