@@ -22,11 +22,11 @@ var app = new Vue({
             return it1;
         }).filter(it1 => it1.consultorios.length > 0);
         this.especialidades = [...this.especialidades_];
-        console.log(this.especialidades[1]);
-        setTimeout(() => {
-            let search = document.querySelector("#search");
-            if (search) search.focus();
-        }, 200);
+        // console.log(this.especialidades[1]);
+        // setTimeout(() => {
+        //     let search = document.querySelector("#search");
+        //     if (search) search.focus();
+        // }, 200);
     },
     methods: {
         toEndereco: (consultorio) => {

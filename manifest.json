@@ -1,14 +1,20 @@
 {
-    "name": "PS list",
-    "short_name": "Ps List",
-    "start_url": "index.html",
+    "manifest_version": "2.2",
+    "name": "PS Lista",
+    "short_name": "PS Lista",
+    "start_url": "/index.html",
     "display": "standalone",
     "background_color": "#022346",
     "theme_color": "#fcfcfa",
-    "orientation": "portrait-primary",
+    "orientation": "portrait",
+
     "icons": [{
-        "src": "/assets/images/ps.png",
+        "src": "/assets/images/ps_192x192.png",
         "type": "image/png",
-        "sizes": "72x72"
+        "sizes": "192x192"
+    }, {
+        "src": "/assets/images/ps_512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
     }]
 }
