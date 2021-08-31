@@ -1,13 +1,18 @@
-const cacheName = "ps-list_v2.2"
+const cacheName = "ps-list_v2.3"
 const assets = [
     "/",
     "/index.html",
+    "/favicon.png",
     "/assets/images/ps.png",
     "/assets/images/ps_192x192.png",
     "/assets/images/ps_512x512.png",
     "/index.js",
     "/assets/jsons/listaEspecialidades.json",
-    "/assets/jsons/result.json"
+    "/assets/jsons/result.json",
+    "/node_modules/vue/dist/vue.min.js",
+    "/node_modules/axios/dist/axios.min.js",
+    "/node_modules/lodash/lodash.js",
+    "/node_modules/bootstrap/dist/css/bootstrap.min.css"
 ]
 
 

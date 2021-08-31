@@ -1,6 +1,10 @@
 {
     "dependencies": {
-        "lodash": "^4.17.21"
+        "axios": "^0.21.1",
+        "bootstrap": "^4.5.3",
+        "lodash": "^4.17.21",
+        "vue": "^2.6.14",
+        "vue-virtual-scroll-list": "^2.3.2"
     },
     "name": "tmp",
     "version": "1.0.0",

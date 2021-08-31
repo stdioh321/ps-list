@@ -1,109 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='manifest' href='./manifest.json'>
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/png" href="favicon.png" />
 
     <title>Prevent</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./node_modules/vue/dist/vue.min.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
     <script src="./node_modules/lodash/lodash.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
 
     <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", function() {
-                navigator.serviceWorker
-                    .register("/serviceWorker.js", {
-                        scope: "./"
-                    })
-                    .then(res => console.log("service worker registered"))
-                    .catch(err => console.log("service worker not registered", err))
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/serviceWorker.js", {
+              scope: "./",
             })
-        }
+            .then((res) => console.log("service worker registered"))
+            .catch((err) => console.log("service worker not registered", err));
+        });
+      }
     </script>
     <style>
-        html,
-        body {
-            scroll-behavior: smooth;
-        }
-        
-        .resultados .titulo {
-            font-weight: 900;
-            position: sticky;
-            z-index: 1;
-            top: 84px;
-            background-color: white;
-        }
+      html,
+      body {
+        scroll-behavior: smooth;
+      }
+
+      .resultados .titulo {
+        font-weight: 900;
+        position: sticky;
+        z-index: 1;
+        top: 84px;
+        background-color: white;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div id="app">
-        <nav class="navbar sticky-top navbar-light bg-light">
-            <h2 class="navbar-brand">
-                <img src="./assets/images/ps.png" alt="" class="img-fluid" style="width: 50px;">
-                <span class="d-none d-md-inline">Prevent Senior</span>
-            </h2>
+      <nav class="navbar sticky-top navbar-light bg-light">
+        <h2 class="navbar-brand">
+          <img
+            src="./assets/images/ps.png"
+            alt=""
+            class="img-fluid"
+            style="width: 50px"
+          />
+          <span class="d-none d-md-inline">Prevent Senior</span>
+        </h2>
 
+        <form
+          class="form-inline"
+          v-if="especialidades_.length > 0"
+          @submit="(ev)=>{ev.preventDefault()}"
+        >
+          <input
+            id="search"
+            class="form-control"
+            type="search"
+            placeholder="Pesquisa"
+            @input="onSearch"
+          />
+        </form>
+      </nav>
+      <div class="container">
+        <div class="row resultados">
+          <div class="col-12" v-if="especialidades_.length <  1">
+            <h2>Carregando...</h2>
+          </div>
+          <div
+            class="col-12"
+            v-if="especialidades_.length > 0 && especialidades.length <  1"
+          >
+            <h2 class="text-danger">Nada Encontrado</h2>
+          </div>
 
-            <form class="form-inline " v-if="especialidades_.length > 0" @submit="(ev)=>{ev.preventDefault()}">
-                <input id="search" class="form-control " type="search" placeholder="Pesquisa" @input="onSearch">
-            </form>
-        </nav>
-        <div class="container">
-            <div class="row resultados">
-                <div class="col-12" v-if="especialidades_.length <  1">
-                    <h2>Carregando...</h2>
-                </div>
-                <div class="col-12" v-if="especialidades_.length > 0 && especialidades.length <  1">
-                    <h2 class="text-danger">Nada Encontrado</h2>
-                </div>
-                <div v-for="item in especialidades" class="resultado col-12 mb-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 class="titulo">{{item?.nome}}</h3>
-                            <div class="row mt-4">
-                                <div v-for="consultorio in item.consultorios" class="consultorio col-12 col-md-6 col-lg-4 mb-2">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="endeco">
-                                                <div class="font-weight-lighter">{{consultorio.nomeCredenciado}}</div>
-                                                <div class="rua my-2 font-weight-bolder">
-                                                    <a target="_blank" :href='"https://www.google.com.br/maps/place/" + toEndereco(consultorio)'>{{toEndereco(consultorio)}}</a>
-                                                </div>
-                                                <!-- <div class="bairro ">{{consultorio?.bairro}} - {{consultorio?.municipio}} - {{consultorio?.estado}}</div> -->
-                                                <div class="cep "><span class="badge badge-secondary ">CEP:</span> {{consultorio?.cep}}</div>
-                                            </div>
-                                            <div class="my-2 ">
-                                                <span class="badge badge-success ">Rede Própria:</span> {{consultorio?.redePropria === true? "Sim ":"Não "}}
-                                            </div>
-                                            <div class="telefones ">
-                                                <span class="badge badge-primary ">Telefones</span>
-                                                <div v-for="telefone in consultorio?.telefones ">
-                                                    <div>{{telefone}}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+          <div v-for="item in especialidades" class="resultado col-12 mb-4">
+            <div class="row">
+              <div class="col-12">
+                <h3 class="titulo">{{item?.nome}}</h3>
+                <div class="row mt-4">
+                  <div
+                    v-for="consultorio in item.consultorios"
+                    class="consultorio col-12 col-md-6 col-lg-4 mb-2"
+                  >
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="endeco">
+                          <div class="font-weight-lighter">
+                            {{consultorio.nomeCredenciado}}
+                          </div>
+                          <div class="rua my-2 font-weight-bolder">
+                            <a
+                              target="_blank"
+                              :href='"https://www.google.com.br/maps/place/" + toEndereco(consultorio)'
+                              >{{toEndereco(consultorio)}}</a
+                            >
+                          </div>
+                          <!-- <div class="bairro ">{{consultorio?.bairro}} - {{consultorio?.municipio}} - {{consultorio?.estado}}</div> -->
+                          <div class="cep">
+                            <span class="badge badge-secondary">CEP:</span>
+                            {{consultorio?.cep}}
+                          </div>
                         </div>
+                        <div class="my-2">
+                          <span class="badge badge-success">Rede Própria:</span>
+                          {{consultorio?.redePropria === true? "Sim ":"Não "}}
+                        </div>
+                        <div class="telefones">
+                          <span class="badge badge-primary">Telefones</span>
+                          <div v-for="telefone in consultorio?.telefones ">
+                            <div>{{telefone}}</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-
+      </div>
     </div>
-    <script src="./index.js"></script>
-</body>
-
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>

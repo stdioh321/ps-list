@@ -1,3 +1,5 @@
+// Vue.component('virtual-list', VirtualList)
+
 var app = new Vue({
     el: ' #app ',
     data: {
