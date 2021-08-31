@@ -1,4 +1,4 @@
-const cacheName = "ps-list_v2.3"
+const cacheName = "ps-list_v2.5"
 const assets = [
     "/",
     "/index.html",
